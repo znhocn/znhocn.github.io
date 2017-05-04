@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://znhocn.github.io/"/>
-  <updated>2017-05-04T08:18:48.884Z</updated>
+  <updated>2017-05-04T10:22:24.450Z</updated>
   <id>https://znhocn.github.io/</id>
   
   <author>
@@ -20,9 +20,9 @@
     <link href="https://znhocn.github.io/posts/2017/05/04/Diary-2017-05-04/"/>
     <id>https://znhocn.github.io/posts/2017/05/04/Diary-2017-05-04/</id>
     <published>2017-05-04T08:13:05.000Z</published>
-    <updated>2017-05-04T08:18:48.884Z</updated>
+    <updated>2017-05-04T10:22:24.450Z</updated>
     
-    <content type="html"><![CDATA[<script src="/crypto-js.js"></script><script src="/mcommon.js"></script><h3 id="encrypt-message">Welcome to my blog, enter password to read.</h3><link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css"> <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"> <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script> <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> <div id="security"> <div> <div class="input-group"> <input type="text" class="form-control" aria-label="Enter the password." id="pass"/> <div class="input-group-btn"> <button type="button" class="btn btn-default" onclick="decryptAES()">Decrypt</button> </div> </div> </div> </div> <div id="encrypt-blog" style="display:none"> U2FsdGVkX18rA9RINuwDytD92YkeEZEmZIaEpi5J6Y6P7Pu/dJSmSL2fbLzNcri5HlWYPAB+JiGdYq0GAQuSphC2q2EKtydyrosapNLOwic= </div>]]></content>
+    <content type="html"><![CDATA[<script src="/crypto-js.js"></script><script src="/mcommon.js"></script><h3 id="encrypt-message">Welcome to my blog, enter password to read.</h3><link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css"> <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"> <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script> <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> <div id="security"> <div> <div class="input-group"> <input type="text" class="form-control" aria-label="Enter the password." id="pass"/> <div class="input-group-btn"> <button type="button" class="btn btn-default" onclick="decryptAES()">Decrypt</button> </div> </div> </div> </div> <div id="encrypt-blog" style="display:none"> U2FsdGVkX1/Bu195Y4IYF/ymMuwsFckeO6guD2XMRk6I4niltJkHZ4K1ZpilP2q8gogpEXCidO1Jd55vQnuvgXmFfvjBSJWOlTSnFQTwhlIjdI2yCd87tVezboHE6kVz </div>]]></content>
     
     <summary type="html">
     
@@ -40,7 +40,7 @@
     <link href="https://znhocn.github.io/posts/2017/01/01/hello-world/"/>
     <id>https://znhocn.github.io/posts/2017/01/01/hello-world/</id>
     <published>2016-12-31T17:01:01.000Z</published>
-    <updated>2017-03-30T02:02:34.181Z</updated>
+    <updated>2017-05-04T11:08:00.539Z</updated>
     
     <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
