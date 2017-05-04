@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://znhocn.github.io/"/>
-  <updated>2017-03-30T02:02:34.181Z</updated>
+  <updated>2017-05-04T08:18:48.884Z</updated>
   <id>https://znhocn.github.io/</id>
   
   <author>
@@ -14,6 +14,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Diary 2017-05-04</title>
+    <link href="https://znhocn.github.io/posts/2017/05/04/Diary-2017-05-04/"/>
+    <id>https://znhocn.github.io/posts/2017/05/04/Diary-2017-05-04/</id>
+    <published>2017-05-04T08:13:05.000Z</published>
+    <updated>2017-05-04T08:18:48.884Z</updated>
+    
+    <content type="html"><![CDATA[<script src="/crypto-js.js"></script><script src="/mcommon.js"></script><h3 id="encrypt-message">Welcome to my blog, enter password to read.</h3><link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css"> <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"> <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script> <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> <div id="security"> <div> <div class="input-group"> <input type="text" class="form-control" aria-label="Enter the password." id="pass"/> <div class="input-group-btn"> <button type="button" class="btn btn-default" onclick="decryptAES()">Decrypt</button> </div> </div> </div> </div> <div id="encrypt-blog" style="display:none"> U2FsdGVkX18rA9RINuwDytD92YkeEZEmZIaEpi5J6Y6P7Pu/dJSmSL2fbLzNcri5HlWYPAB+JiGdYq0GAQuSphC2q2EKtydyrosapNLOwic= </div>]]></content>
+    
+    <summary type="html">
+    
+      The article has been encrypted, please enter your password to view.&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="Diary" scheme="https://znhocn.github.io/tags/Diary/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
