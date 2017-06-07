@@ -6,6 +6,7 @@ My Blog: https://znhocn.github.io/
 git clone https://github.com/znhocn/znhocn.github.io.git
 cd znhocn.github.io/
 ./decrypt.sh
+npm install hexo-cli -g && npm install
 ```
 
 ```bash
