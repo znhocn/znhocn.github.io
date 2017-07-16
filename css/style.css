@@ -438,6 +438,15 @@ body {
   float: right;
   margin-right: -15px;
 }
+#nav-weibo-link:before {
+  content: "\f18a";
+}
+#nav-twitter-link:before {
+  content: "\f099";
+}
+#nav-github-link:before {
+  content: "\f113";
+}
 #nav-rss-link:before {
   content: "\f09e";
 }
