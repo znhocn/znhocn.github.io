@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hacking IP Camera (和慧眼-C08) | ZnHoCn&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="The article has been encrypted, please enter your password to view.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hacking IP Camera (和慧眼-C08)">
+<meta property="og:url" content="https://znhocn.github.io/posts/2017/12/26/Hacking-IP-Camera-Hehuiyan-C08/index.html">
+<meta property="og:site_name" content="ZnHoCn's Blog">
+<meta property="og:description" content="The article has been encrypted, please enter your password to view.">
+<meta property="og:updated_time" content="2017-12-30T16:20:55.196Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hacking IP Camera (和慧眼-C08)">
+<meta name="twitter:description" content="The article has been encrypted, please enter your password to view.">
+  
+    <link rel="alternate" href="/atom.xml" title="ZnHoCn&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  
+    <!--<link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">-->
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">ZnHoCn&#39;s Blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="//www.hakr.xyz">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/about">About</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-twitter-link" class="nav-icon" href="https://twitter.com/znhocn" target="_blank" title="Twitter"></a>
+        
+        
+          <a id="nav-github-link" class="nav-icon" href="https://github.com/znhocn" target="_blank" title="GitHub"></a>
+        
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://znhocn.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Hacking-IP-Camera-Hehuiyan-C08" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/posts/2017/12/26/Hacking-IP-Camera-Hehuiyan-C08/" class="article-date">
+  <time datetime="2017-12-25T18:12:27.000Z" itemprop="datePublished">2017-12-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Hacking IP Camera (和慧眼-C08)
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <script src="/crypto-js.js"></script><script src="/mcommon.js"></script><h3 id="encrypt-message">2018/01/30 后公开内容</h3><link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css"> <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"> <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script> <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> <div id="security"> <div> <div class="input-group"> <input type="text" class="form-control" aria-label="Enter the password." id="pass"/> <div class="input-group-btn"> <button type="button" class="btn btn-default" onclick="decryptAES()">Decrypt</button> </div> </div> </div> </div> <div id="encrypt-blog" style="display:none"> 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 </div>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://znhocn.github.io/posts/2017/12/26/Hacking-IP-Camera-Hehuiyan-C08/" data-id="cjbwcw7ev001ijou8jv8wvfdx" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hacking/">Hacking</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hardware/">Hardware</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/IP-Camera/">IP Camera</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Reverse-Engineering/">Reverse Engineering</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/posts/2017/12/30/Annual-summary-2017/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Annual summary 2017
+        
+      </div>
+    </a>
+  
+  
+    <a href="/posts/2017/12/17/Hacking-Philips-Smart-Led-Ball-Lamp/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hacking 飞利浦智能球泡灯</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/posts/2017/12/30/Annual-summary-2017/">Annual summary 2017</a>
+          </li>
+        
+          <li>
+            <a href="/posts/2017/12/26/Hacking-IP-Camera-Hehuiyan-C08/">Hacking IP Camera (和慧眼-C08)</a>
+          </li>
+        
+          <li>
+            <a href="/posts/2017/12/17/Hacking-Philips-Smart-Led-Ball-Lamp/">Hacking 飞利浦智能球泡灯</a>
+          </li>
+        
+          <li>
+            <a href="/posts/2017/12/08/Philips-Smart-Led-Ball-Lamp-Dismantling-and-Firmware-extraction/">米家的飞利浦智睿球泡灯拆解与固件提取</a>
+          </li>
+        
+          <li>
+            <a href="/posts/2017/08/15/How-to-Get-YouTube-4K-Videos/">如何获取 YouTube 4K 视频</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/4K/" style="font-size: 10px;">4K</a> <a href="/tags/Annual-summary/" style="font-size: 13.33px;">Annual summary</a> <a href="/tags/Diary/" style="font-size: 20px;">Diary</a> <a href="/tags/ESP8266/" style="font-size: 13.33px;">ESP8266</a> <a href="/tags/Firmware/" style="font-size: 10px;">Firmware</a> <a href="/tags/Hacking/" style="font-size: 13.33px;">Hacking</a> <a href="/tags/Hardware/" style="font-size: 16.67px;">Hardware</a> <a href="/tags/IP-Camera/" style="font-size: 10px;">IP Camera</a> <a href="/tags/Mijia/" style="font-size: 10px;">Mijia</a> <a href="/tags/PGP/" style="font-size: 10px;">PGP</a> <a href="/tags/Radio/" style="font-size: 10px;">Radio</a> <a href="/tags/Reverse-Engineering/" style="font-size: 10px;">Reverse Engineering</a> <a href="/tags/YARD-Stick-One/" style="font-size: 10px;">YARD Stick One</a> <a href="/tags/YouTube/" style="font-size: 10px;">YouTube</a> <a href="/tags/YubiKey/" style="font-size: 10px;">YubiKey</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">友情链接</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="https://blog.iternull.com" target="_blank">IterNull Blog</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 ZnHoCn<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="//www.hakr.xyz" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav>
+    
+
+<script src="/js/jquery-2.0.3.min.js" type='text/javascript'></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
