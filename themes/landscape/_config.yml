@@ -1,9 +1,13 @@
 # Header
 menu:
-  Home: /
+  Home: //www.hakr.xyz
   Archives: /archives
   About: /about
 rss: /atom.xml
+
+# SNS Links
+twitter_url: https://twitter.com/znhocn
+github_url: https://github.com/znhocn
 
 # Content
 excerpt_link: Read More
@@ -14,9 +18,14 @@ sidebar: right
 widgets:
 - recent_posts
 #- category
-#- tag
 - tagcloud
+#- tag
 #- archive
+- links
+
+# Links
+links:
+  IterNull Blog: https://blog.iternull.com
 
 # display widgets at the bottom of index pages (pagination == 2)
 index_widgets:

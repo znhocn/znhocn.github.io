@@ -1,1 +1,1 @@
-# znhocn.github.io
+# blog.hakr.xyz
