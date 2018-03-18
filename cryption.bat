@@ -10,7 +10,7 @@ if "%1"=="de" (
     FOR %%i IN (source/_posts/*.asc) DO gpg --batch --yes source/_posts/%%i
     FOR %%i IN (source/_drafts/*.asc) DO gpg --batch --yes source/_drafts/%%i
     echo Decrypt OK
-) 
+)
 
 if "%1" NEQ "en" if "%1" NEQ "de" (
     echo Usage:

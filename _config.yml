@@ -73,6 +73,9 @@ encrypt:
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
+#deploy:
+#  type: git
+#  repo: https://github.com/znhocn/znhocn.github.io.git
 deploy:
   type: git
-  repo: https://github.com/znhocn/znhocn.github.io.git
+  repo: git@github.com:znhocn/znhocn.github.io.git
