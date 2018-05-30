@@ -11,31 +11,31 @@
 <meta property="og:url" content="https://znhocn.github.io/posts/2017/12/26/Hacking-IP-Camera-Hehuiyan-C08/index.html">
 <meta property="og:site_name" content="ZnHoCn's Blog">
 <meta property="og:description" content="和慧眼是中国移动推出的一个摄像网络监控服务平台，旗下有多款智能摄像头设备。这里我们研究使用的是 C08 型号的。IPCamera 与 WebCam 的其中一个区别是 IPCamera 不带有 Web 控制台，你只能使用厂商提供的 APP 控制设备，无法在局域网内通过网页控制设备。并且 IPCamera 基本上都要连接互联网使用厂商的云平台，这意味着你的数据都会传输到云端，还可能需要再付费租用它的云">
-<meta property="og:image" content="https://znhocn.github.io//files.hakr.xyz/images/2018-12-26_01-0001.jpg">
-<meta property="og:image" content="https://znhocn.github.io//files.hakr.xyz/images/2018-12-26_01-0002.jpg">
-<meta property="og:image" content="https://znhocn.github.io//files.hakr.xyz/images/2018-12-26_01-0003.jpg">
-<meta property="og:image" content="https://znhocn.github.io//files.hakr.xyz/images/2018-12-26_01-0004.png">
-<meta property="og:image" content="https://znhocn.github.io//files.hakr.xyz/images/2018-12-26_01-0005.jpg">
-<meta property="og:image" content="https://znhocn.github.io//files.hakr.xyz/images/2018-12-26_01-0006.png">
-<meta property="og:image" content="https://znhocn.github.io//files.hakr.xyz/images/2018-12-26_01-0007.png">
-<meta property="og:image" content="https://znhocn.github.io//files.hakr.xyz/images/2018-12-26_01-0008.png">
-<meta property="og:image" content="https://znhocn.github.io//files.hakr.xyz/images/2018-12-26_01-0009.png">
-<meta property="og:image" content="https://znhocn.github.io//files.hakr.xyz/images/2018-12-26_01-0010.png">
-<meta property="og:image" content="https://znhocn.github.io//files.hakr.xyz/images/2018-12-26_01-0011.png">
-<meta property="og:image" content="https://znhocn.github.io//files.hakr.xyz/images/2018-12-26_01-0012.png">
-<meta property="og:image" content="https://znhocn.github.io//files.hakr.xyz/images/2018-12-26_01-0013.png">
-<meta property="og:image" content="https://znhocn.github.io//files.hakr.xyz/images/2018-12-26_01-0014.png">
-<meta property="og:image" content="https://znhocn.github.io//files.hakr.xyz/images/2018-12-26_01-0015.png">
-<meta property="og:image" content="https://znhocn.github.io//files.hakr.xyz/images/2018-12-26_01-0016.png">
-<meta property="og:image" content="https://znhocn.github.io//files.hakr.xyz/images/2018-12-26_01-0017.png">
-<meta property="og:image" content="https://znhocn.github.io//files.hakr.xyz/images/2018-12-26_01-0018.png">
-<meta property="og:image" content="https://znhocn.github.io//files.hakr.xyz/images/2018-12-26_01-0019.png">
-<meta property="og:image" content="https://znhocn.github.io//files.hakr.xyz/images/2018-12-26_01-0020.png">
-<meta property="og:updated_time" content="2018-05-30T13:34:39.796Z">
+<meta property="og:image" content="https://znhocn.github.io//files.hakr.xyz/images/2017-12-26_01-0001.jpg">
+<meta property="og:image" content="https://znhocn.github.io//files.hakr.xyz/images/2017-12-26_01-0002.jpg">
+<meta property="og:image" content="https://znhocn.github.io//files.hakr.xyz/images/2017-12-26_01-0003.jpg">
+<meta property="og:image" content="https://znhocn.github.io//files.hakr.xyz/images/2017-12-26_01-0004.png">
+<meta property="og:image" content="https://znhocn.github.io//files.hakr.xyz/images/2017-12-26_01-0005.jpg">
+<meta property="og:image" content="https://znhocn.github.io//files.hakr.xyz/images/2017-12-26_01-0006.png">
+<meta property="og:image" content="https://znhocn.github.io//files.hakr.xyz/images/2017-12-26_01-0007.png">
+<meta property="og:image" content="https://znhocn.github.io//files.hakr.xyz/images/2017-12-26_01-0008.png">
+<meta property="og:image" content="https://znhocn.github.io//files.hakr.xyz/images/2017-12-26_01-0009.png">
+<meta property="og:image" content="https://znhocn.github.io//files.hakr.xyz/images/2017-12-26_01-0010.png">
+<meta property="og:image" content="https://znhocn.github.io//files.hakr.xyz/images/2017-12-26_01-0011.png">
+<meta property="og:image" content="https://znhocn.github.io//files.hakr.xyz/images/2017-12-26_01-0012.png">
+<meta property="og:image" content="https://znhocn.github.io//files.hakr.xyz/images/2017-12-26_01-0013.png">
+<meta property="og:image" content="https://znhocn.github.io//files.hakr.xyz/images/2017-12-26_01-0014.png">
+<meta property="og:image" content="https://znhocn.github.io//files.hakr.xyz/images/2017-12-26_01-0015.png">
+<meta property="og:image" content="https://znhocn.github.io//files.hakr.xyz/images/2017-12-26_01-0016.png">
+<meta property="og:image" content="https://znhocn.github.io//files.hakr.xyz/images/2017-12-26_01-0017.png">
+<meta property="og:image" content="https://znhocn.github.io//files.hakr.xyz/images/2017-12-26_01-0018.png">
+<meta property="og:image" content="https://znhocn.github.io//files.hakr.xyz/images/2017-12-26_01-0019.png">
+<meta property="og:image" content="https://znhocn.github.io//files.hakr.xyz/images/2017-12-26_01-0020.png">
+<meta property="og:updated_time" content="2018-05-30T13:40:18.221Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hacking IP Camera (和慧眼-C08)">
 <meta name="twitter:description" content="和慧眼是中国移动推出的一个摄像网络监控服务平台，旗下有多款智能摄像头设备。这里我们研究使用的是 C08 型号的。IPCamera 与 WebCam 的其中一个区别是 IPCamera 不带有 Web 控制台，你只能使用厂商提供的 APP 控制设备，无法在局域网内通过网页控制设备。并且 IPCamera 基本上都要连接互联网使用厂商的云平台，这意味着你的数据都会传输到云端，还可能需要再付费租用它的云">
-<meta name="twitter:image" content="https://znhocn.github.io//files.hakr.xyz/images/2018-12-26_01-0001.jpg">
+<meta name="twitter:image" content="https://znhocn.github.io//files.hakr.xyz/images/2017-12-26_01-0001.jpg">
   
     <link rel="alternate" href="/atom.xml" title="ZnHoCn&#39;s Blog" type="application/atom+xml">
   
@@ -115,9 +115,9 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p><a href="www.hehuiyan.com/">和慧眼</a>是中国移动推出的一个摄像网络监控服务平台，旗下有多款智能摄像头设备。这里我们研究使用的是 C08 型号的。<br>IPCamera 与 WebCam 的其中一个区别是 IPCamera 不带有 Web 控制台，你只能使用厂商提供的 APP 控制设备，无法在局域网内通过网页控制设备。<br>并且 IPCamera 基本上都要连接互联网使用厂商的云平台，这意味着你的数据都会传输到云端，还可能需要再付费租用它的云端平台功能使用权。<br><a id="more"></a></p>
-<h2 id="1-拆解硬件"><a href="#1-拆解硬件" class="headerlink" title="1 拆解硬件"></a>1 拆解硬件</h2><p><img src="//files.hakr.xyz/images/2018-12-26_01-0001.jpg" alt=""><br><img src="//files.hakr.xyz/images/2018-12-26_01-0002.jpg" alt=""></p>
+<h2 id="1-拆解硬件"><a href="#1-拆解硬件" class="headerlink" title="1 拆解硬件"></a>1 拆解硬件</h2><p><img src="//files.hakr.xyz/images/2017-12-26_01-0001.jpg" alt=""><br><img src="//files.hakr.xyz/images/2017-12-26_01-0002.jpg" alt=""></p>
 <h2 id="2-串口调试"><a href="#2-串口调试" class="headerlink" title="2 串口调试"></a>2 串口调试</h2><p>我们这里使用 CP2012 USB to TTL 工具连接到设备上焊接了跳线的 UART 接口</p>
-<p><img src="//files.hakr.xyz/images/2018-12-26_01-0003.jpg" alt=""></p>
+<p><img src="//files.hakr.xyz/images/2017-12-26_01-0003.jpg" alt=""></p>
 <p>使用 PuTTY 客户端连接 COM 端口开始上电调试</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div></pre></td><td class="code"><pre><div class="line">U-Boot 2010.06-svn2464 (Jan 21 2015 - 09:06:53)</div><div class="line">DRAM:  256 MiB</div><div class="line">gBootLogPtr:80b80008.</div><div class="line">Check spi flash controller v350... Found</div><div class="line">Spi(cs1) ID: 0xEF 0x40 0x18 0x00 0x00 0x00</div><div class="line">reset/hold pin now is RESET</div><div class="line">Spi(cs1): Block:64KB Chip:16MB Name:<span class="string">"W25Q128B"</span></div><div class="line">boot from spi</div><div class="line">boot from spi</div><div class="line">partition file version 2</div><div class="line">rootfstype squashfs root /dev/mtdblock4</div><div class="line">In:    serial</div><div class="line">Out:   serial</div><div class="line">Err:   serial</div><div class="line">TEXT_BASE:81000000</div><div class="line">state:ff,err_count:00</div><div class="line">support SD update</div><div class="line">MMC:   Card did not respond to voltage select!</div><div class="line">No EMMC device found!!!</div><div class="line">Hisilicon ETH net controler</div><div class="line">No such device: 0:1</div><div class="line">No such device: 0:1</div><div class="line">No such device: 0:2</div><div class="line">No such device: 0:2</div><div class="line">Try again use backup_serverip</div><div class="line">Hisilicon ETH net controler</div><div class="line">No such device: 0:1</div><div class="line">No such device: 0:1</div><div class="line">No such device: 0:2</div><div class="line">No such device: 0:2</div><div class="line">Failed to get info.txt</div><div class="line">Fail to get info file!</div><div class="line">Init error!</div><div class="line">Hisilicon ETH net controler</div><div class="line">No such device: 0:1</div><div class="line">No such device: 0:1</div><div class="line">No such device: 0:2</div><div class="line">No such device: 0:2</div><div class="line"><span class="comment">## Booting kernel from Legacy Image at 82000000 ...</span></div><div class="line">   Image Name:   Linux-3.0.8</div><div class="line">   Image Type:   ARM Linux Kernel Image (uncompressed)</div><div class="line">   Data Size:    1042164 Bytes = 1017.7 KiB</div><div class="line">   Load Address: 80008000</div><div class="line">   Entry Point:  80008000</div><div class="line">   Loading Kernel Image ...OK</div><div class="line">OK</div><div class="line">boot from spi</div><div class="line">partition file version 2</div><div class="line">rootfstype squashfs root /dev/mtdblock4</div><div class="line">cmdLine mem=44M console=ttyS0,115200 root=/dev/mtdblock4 rootfstype=squashfs</div><div class="line"></div><div class="line">Starting kernel ...</div><div class="line">Uncompressing Linux... <span class="keyword">done</span>, booting the kernel.</div></pre></td></tr></table></figure>
 <p>尝试了多次，调试信息都是一直卡在 booting the kernel. 这，没弹出 Shell ，也没弹出登陆认证的请求。尝使用串口登陆 Shell 只能暂时放弃。</p>
@@ -127,9 +127,9 @@
 <h3 id="3-2-网络数据包分析"><a href="#3-2-网络数据包分析" class="headerlink" title="3.2 网络数据包分析"></a>3.2 网络数据包分析</h3><p>这里使用安装了 <code>tcpdump</code> 且支持外接 USB 存储的 OpenWrt 路由器设备进行抓包。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ mount /dev/sdb1 /mnt/usb/    // 挂载 U盘</div><div class="line">$ <span class="built_in">cd</span> /mnt/usb/pcap/    // 进入 U盘挂载目录</div><div class="line">$ tcpdump -i wlan0-1 -w wlan0-1_$(date +%s).cap    // 抓取无线网卡上的数据流量</div></pre></td></tr></table></figure>
 <p>抓取一段时间的数据包后使用 Wireshark 打开 <code>.pcap</code> 文件，分析 IPCamera 的数据通信流量。</p>
-<p><img src="//files.hakr.xyz/images/2018-12-26_01-0004.png" alt=""></p>
+<p><img src="//files.hakr.xyz/images/2017-12-26_01-0004.png" alt=""></p>
 <h2 id="4-固件提取"><a href="#4-固件提取" class="headerlink" title="4 固件提取"></a>4 固件提取</h2><h3 id="4-1-从-SPI-Flash-芯片里提取固件"><a href="#4-1-从-SPI-Flash-芯片里提取固件" class="headerlink" title="4.1 从 SPI Flash 芯片里提取固件"></a>4.1 从 SPI Flash 芯片里提取固件</h3><p>我们这里使用 Bus Pirate + 转接座 + SOP8 测试夹 工具来连接 SPI Flash 芯片提取固件。</p>
-<p><img src="//files.hakr.xyz/images/2018-12-26_01-0005.jpg" alt=""></p>
+<p><img src="//files.hakr.xyz/images/2017-12-26_01-0005.jpg" alt=""></p>
 <p>读取 SPI Flash 芯片内的数据到文件</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ flashrom -p buspirate_spi:dev=/dev/ttyUSB0,spispeed=1M -r flash_0.bin</div></pre></td></tr></table></figure>
 <h3 id="4-2-从空气中提取固件"><a href="#4-2-从空气中提取固件" class="headerlink" title="4.2 从空气中提取固件"></a>4.2 从空气中提取固件</h3><p><strong>从空气中提取固件</strong> 在物联网时代里 OTA 固件升级模式下获得厂商原始升级固件的最佳方法！</p>
@@ -139,23 +139,23 @@
 <p>抓取无线网卡上的数据流量</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ tcpdump -i wlan0-1 -w wlan0-1_$(date +%s).cap</div></pre></td></tr></table></figure>
 <p>开始抓取流量后在 APP 控制端上点击对设备固件升级(更新前最好是对 SPI Flash 先备份，以保留旧版本的固件。)</p>
-<p><img src="//files.hakr.xyz/images/2018-12-26_01-0006.png" alt=""></p>
+<p><img src="//files.hakr.xyz/images/2017-12-26_01-0006.png" alt=""></p>
 <p>把抓取的数据包中的数据流保存到文件</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ tcpflow -r wlan0-1_1515316239.cap</div></pre></td></tr></table></figure>
-<p><img src="//files.hakr.xyz/images/2018-12-26_01-0007.png" alt=""></p>
+<p><img src="//files.hakr.xyz/images/2017-12-26_01-0007.png" alt=""></p>
 <p>查看未知格式的的数据文件</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ file * | grep data</div></pre></td></tr></table></figure>
-<p><img src="//files.hakr.xyz/images/2018-12-26_01-0008.png" alt=""></p>
+<p><img src="//files.hakr.xyz/images/2017-12-26_01-0008.png" alt=""></p>
 <p>递归扫描并提取出其中已知格式的文件</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ binwalk -Me 211.140.013.023.15050-172.016.042.116.42004</div></pre></td></tr></table></figure>
-<p><img src="//files.hakr.xyz/images/2018-12-26_01-0009.png" alt=""></p>
+<p><img src="//files.hakr.xyz/images/2017-12-26_01-0009.png" alt=""></p>
 <p>递归扫描并提取出的已知格式的文件</p>
-<p><img src="//files.hakr.xyz/images/2018-12-26_01-0010.png" alt=""></p>
+<p><img src="//files.hakr.xyz/images/2017-12-26_01-0010.png" alt=""></p>
 <h2 id="5-固件逆向"><a href="#5-固件逆向" class="headerlink" title="5 固件逆向"></a>5 固件逆向</h2><h3 id="5-1-解包固件"><a href="#5-1-解包固件" class="headerlink" title="5.1 解包固件"></a>5.1 解包固件</h3><p>从备份的 SPI Flash 数据里递归扫描并提取出其中已知格式的文件</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ binwalk -Me flash_0.bin</div></pre></td></tr></table></figure>
 <p>查看递归提取后的文件</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> _flash_0.bin.extracted/</div><div class="line">$ tree -L 3</div><div class="line">$ ls <span class="_">-l</span> squashfs-root*</div></pre></td></tr></table></figure>
-<p><img src="//files.hakr.xyz/images/2018-12-26_01-0011.png" alt=""></p>
+<p><img src="//files.hakr.xyz/images/2017-12-26_01-0011.png" alt=""></p>
 <p>查看 Linux 用户与密码</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> squashfs-root/</div><div class="line">$ <span class="built_in">cd</span> etc/</div><div class="line">$ cat passwd</div><div class="line">root:<span class="variable">$1</span><span class="variable">$jSqQv</span>.uP<span class="variable">$jgz4lwEx2pnDh4QwXkh06</span>/:0:0:root:/:/bin/sh</div></pre></td></tr></table></figure>
 <p>查看 <code>passwd</code> 文件，发现系统里只有一个 root 用户，加盐后的的密码 Hash ，登陆 shell 为 <code>/bin/sh</code>。 使用 <a href="http://www.openwall.com/john/" target="_blank" rel="external">John the Ripper</a> 对 Hash 进行解码成明文密码。</p>
@@ -165,10 +165,10 @@
 <p>查找 Telnet 服务程序</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> _flash_0.bin.extracted/squashfs-root/</div><div class="line">$ find ./ -name *telnet*</div><div class="line">./bin/telnet    // Telnet 客户端</div><div class="line">./sbin/telnetd    // Telnet 服务端</div></pre></td></tr></table></figure>
 <p>使用 IDA Pro 对 <code>telnetd</code> 进行反汇编后发现 Telnet 的用户名和密码是硬编码在程序里的。</p>
-<p><img src="//files.hakr.xyz/images/2018-12-26_01-0012.png" alt=""><br><img src="//files.hakr.xyz/images/2018-12-26_01-0013.png" alt=""></p>
+<p><img src="//files.hakr.xyz/images/2017-12-26_01-0012.png" alt=""><br><img src="//files.hakr.xyz/images/2017-12-26_01-0013.png" alt=""></p>
 <p><strong>Telnet 登陆账号</strong><br>User: <code>admin</code><br>Password: <code>7ujMko0admin</code></p>
 <p>使用这个用户再次尝试登陆 Telnet </p>
-<p><img src="//files.hakr.xyz/images/2018-12-26_01-0014.png" alt=""></p>
+<p><img src="//files.hakr.xyz/images/2017-12-26_01-0014.png" alt=""></p>
 <blockquote>
 <p><strong>成功了！！！</strong><br>这个我们已经获得了 Shell 与 root 权限</p>
 </blockquote>
@@ -204,11 +204,11 @@
 
 -->
 <h3 id="5-4-找出-RTSP-用户名与密码"><a href="#5-4-找出-RTSP-用户名与密码" class="headerlink" title="5.4 找出 RTSP 用户名与密码"></a>5.4 找出 RTSP 用户名与密码</h3><p>使用 <a href="https://www.videolan.org/" target="_blank" rel="external">VLC media player</a> 连接到 IPCamera 的 RTSP 服务端，发现是个需要使用用户名和密码登陆认证的服务。</p>
-<p><img src="//files.hakr.xyz/images/2018-12-26_01-0015.png" alt=""></p>
+<p><img src="//files.hakr.xyz/images/2017-12-26_01-0015.png" alt=""></p>
 <p>使用 IDA Pro 对系统运行的几个私有程序进行反编译后发现配置文件大多都保存在 <code>/mnt/</code> 目录下。于是在 <code>/mnt/pd/product.zip</code> 文件里找到了几个账号。</p>
-<p><img src="//files.hakr.xyz/images/2018-12-26_01-0016.png" alt=""></p>
+<p><img src="//files.hakr.xyz/images/2017-12-26_01-0016.png" alt=""></p>
 <p>尝试这些账号登陆服务发现 <code>admin</code> 账号是可用的，并成功的连接到了 IPCamera 的 RTSP 服务。在 VLC media player 里能够直接看到实时视频与音频。</p>
-<p><img src="//files.hakr.xyz/images/2018-12-26_01-0017.png" alt=""></p>
+<p><img src="//files.hakr.xyz/images/2017-12-26_01-0017.png" alt=""></p>
 <h3 id="5-5-嗅探-5000-端口运行的服务"><a href="#5-5-嗅探-5000-端口运行的服务" class="headerlink" title="5.5 嗅探 5000 端口运行的服务"></a>5.5 嗅探 5000 端口运行的服务</h3><p>使用 NetCat 连接到 <code>5000</code> 端口，连接后并不返回任何信息，尝试发送字符信息也并未回复，且发送到一定字节信息后自动了关闭连接。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ nc 192.168.8.236 5000</div></pre></td></tr></table></figure>
 <p>使用 <a href="https://github.com/0x90/miranda-upnp" target="_blank" rel="external">miranda-upnp</a> 工具扫描局域网内的运行着 UPnP 的设备也为发现有 IPCamera 的信息。目前未得出此端口运行的是什么服务。猜测可能是进行局域网内远程信息配置相关的。</p>
@@ -218,13 +218,13 @@
 <p>使用 dex2jar 将 <code>.dex</code> 文件转换成 <code>.class</code> 文件</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> hhy/assets/</div><div class="line">dex2jar classes.dex</div></pre></td></tr></table></figure>
 <p>使用 <a href="http://jd.benow.ca/" target="_blank" rel="external">JD-GUI</a> 查看反编译后的代码</p>
-<p><img src="//files.hakr.xyz/images/2018-12-26_01-0018.png" alt=""></p>
+<p><img src="//files.hakr.xyz/images/2017-12-26_01-0018.png" alt=""></p>
 <p>这里有找到 RTSP 相关的内容</p>
 <h3 id="6-2-APP-网络通信分析"><a href="#6-2-APP-网络通信分析" class="headerlink" title="6.2 APP 网络通信分析"></a>6.2 APP 网络通信分析</h3><p>可以使用 <a href="https://portswigger.net/burp" target="_blank" rel="external">Burp Suite</a> 去分析/修改 APP 网络通信的数据内容。这里不做讲解。</p>
 <h2 id="7-漏洞利用"><a href="#7-漏洞利用" class="headerlink" title="7 漏洞利用"></a>7 漏洞利用</h2><h3 id="7-1-作为直播摄像头"><a href="#7-1-作为直播摄像头" class="headerlink" title="7.1 作为直播摄像头"></a>7.1 作为直播摄像头</h3><p>这个 IPCamera 上运行着 RTSP 服务，我们可以尝试把视频流导入到 <a href="https://obsproject.com/" target="_blank" rel="external">OBS</a> 里，作为直播摄像头。</p>
 <p>在 OBS 里添加 RTSP 作为媒体源</p>
-<p><img src="//files.hakr.xyz/images/2018-12-26_01-0019.png" alt=""></p>
-<p><img src="//files.hakr.xyz/images/2018-12-26_01-0020.png" alt=""></p>
+<p><img src="//files.hakr.xyz/images/2017-12-26_01-0019.png" alt=""></p>
+<p><img src="//files.hakr.xyz/images/2017-12-26_01-0020.png" alt=""></p>
 <h3 id="7-2-作为-DoS-肉鸡"><a href="#7-2-作为-DoS-肉鸡" class="headerlink" title="7.2 作为 DoS 肉鸡"></a>7.2 作为 DoS 肉鸡</h3><p>这个 IPCamera 还有空余存储，<code>/mnt/</code> 目录下也是可写的，并且系统内置可使用的 <code>tftp</code> <code>tftpd</code> 程序，你可以编写自己后门程序编译后通过 FTP 传输到设备上。</p>
 <hr>
 <ul>
@@ -234,7 +234,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://znhocn.github.io/posts/2017/12/26/Hacking-IP-Camera-Hehuiyan-C08/" data-id="cjht5o6jw000oicu8ykkqgrnc" class="article-share-link">Share</a>
+      <a data-url="https://znhocn.github.io/posts/2017/12/26/Hacking-IP-Camera-Hehuiyan-C08/" data-id="cjht5t8ib000nxwu8wfhhg2vm" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hacking/">Hacking</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hardware/">Hardware</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/IPCamera/">IPCamera</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Reverse-Engineering/">Reverse Engineering</a></li></ul>
