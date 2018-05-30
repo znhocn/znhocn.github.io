@@ -31,7 +31,7 @@
 <meta property="og:image" content="https://znhocn.github.io//files.hakr.xyz/images/2017-12-26_01-0018.png">
 <meta property="og:image" content="https://znhocn.github.io//files.hakr.xyz/images/2017-12-26_01-0019.png">
 <meta property="og:image" content="https://znhocn.github.io//files.hakr.xyz/images/2017-12-26_01-0020.png">
-<meta property="og:updated_time" content="2018-05-30T13:40:18.221Z">
+<meta property="og:updated_time" content="2018-05-30T15:25:43.625Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hacking IP Camera (和慧眼-C08)">
 <meta name="twitter:description" content="和慧眼是中国移动推出的一个摄像网络监控服务平台，旗下有多款智能摄像头设备。这里我们研究使用的是 C08 型号的。IPCamera 与 WebCam 的其中一个区别是 IPCamera 不带有 Web 控制台，你只能使用厂商提供的 APP 控制设备，无法在局域网内通过网页控制设备。并且 IPCamera 基本上都要连接互联网使用厂商的云平台，这意味着你的数据都会传输到云端，还可能需要再付费租用它的云">
@@ -214,9 +214,9 @@
 <p>使用 <a href="https://github.com/0x90/miranda-upnp" target="_blank" rel="external">miranda-upnp</a> 工具扫描局域网内的运行着 UPnP 的设备也为发现有 IPCamera 的信息。目前未得出此端口运行的是什么服务。猜测可能是进行局域网内远程信息配置相关的。</p>
 <h2 id="6-APP-逆向"><a href="#6-APP-逆向" class="headerlink" title="6 APP 逆向"></a>6 APP 逆向</h2><p>APP 里可能会保留部分有用的信息，这里尝试对其简单的分析。</p>
 <h3 id="6-1-解包程序逆向代码"><a href="#6-1-解包程序逆向代码" class="headerlink" title="6.1 解包程序逆向代码"></a>6.1 解包程序逆向代码</h3><p>使用 Apktool 解包 <code>.apk</code> 文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">apktool d hhy.apk</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ apktool d hhy.apk</div></pre></td></tr></table></figure>
 <p>使用 dex2jar 将 <code>.dex</code> 文件转换成 <code>.class</code> 文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> hhy/assets/</div><div class="line">dex2jar classes.dex</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> hhy/assets/</div><div class="line">$ dex2jar classes.dex</div></pre></td></tr></table></figure>
 <p>使用 <a href="http://jd.benow.ca/" target="_blank" rel="external">JD-GUI</a> 查看反编译后的代码</p>
 <p><img src="//files.hakr.xyz/images/2017-12-26_01-0018.png" alt=""></p>
 <p>这里有找到 RTSP 相关的内容</p>
@@ -234,7 +234,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://znhocn.github.io/posts/2017/12/26/Hacking-IP-Camera-Hehuiyan-C08/" data-id="cjht5yx4w000ubsu8a723k7ce" class="article-share-link">Share</a>
+      <a data-url="https://znhocn.github.io/posts/2017/12/26/Hacking-IP-Camera-Hehuiyan-C08/" data-id="cjht9jqf2000u38u8icd8xaie" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hacking/">Hacking</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hardware/">Hardware</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/IPCamera/">IPCamera</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Reverse-Engineering/">Reverse Engineering</a></li></ul>
