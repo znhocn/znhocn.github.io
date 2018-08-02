@@ -3,15 +3,27 @@
 <head>
   <meta charset="utf-8">
   
-  <title>ZnHoCn&#39;s Blog</title>
+  <title>替换阿里智能插座控制模组為小米控制模组 | ZnHoCn&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="ZnHoCn&#39;s Blog">
-<meta property="og:url" content="https://znhocn.github.io/page/2/index.html">
+  <meta name="description" content="用了半年多時間的阿里智能插座，實在是受不了它那做的超爛的「阿里智能」app 了，打開 app 后還要刷新幾下才能出現綁定的設備，界面也超難用。決心還是換回小米的產品綫。">
+<meta name="keywords" content="Xiaomi,Mijia,Smart Plug,Smart Socket,Ali">
+<meta property="og:type" content="article">
+<meta property="og:title" content="替换阿里智能插座控制模组為小米控制模组">
+<meta property="og:url" content="https://znhocn.github.io/posts/2018/07/21/Replace-Ali-socket-control-module-into-Xiaomi-control-module/index.html">
 <meta property="og:site_name" content="ZnHoCn&#39;s Blog">
+<meta property="og:description" content="用了半年多時間的阿里智能插座，實在是受不了它那做的超爛的「阿里智能」app 了，打開 app 后還要刷新幾下才能出現綁定的設備，界面也超難用。決心還是換回小米的產品綫。">
 <meta property="og:locale" content="zh-TW">
+<meta property="og:image" content="https://files.hakr.xyz/images/2018-07-21_01-0001.jpg">
+<meta property="og:image" content="https://files.hakr.xyz/images/2018-07-21_01-0002.png">
+<meta property="og:image" content="https://files.hakr.xyz/images/2018-07-21_01-0003.jpg">
+<meta property="og:image" content="https://files.hakr.xyz/images/2018-07-21_01-0004.jpg">
+<meta property="og:image" content="https://files.hakr.xyz/images/2018-07-21_01-0005.jpg">
+<meta property="og:image" content="https://files.hakr.xyz/images/2018-07-21_01-0006.jpg">
+<meta property="og:updated_time" content="2018-08-02T07:55:53.048Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ZnHoCn&#39;s Blog">
+<meta name="twitter:title" content="替换阿里智能插座控制模组為小米控制模组">
+<meta name="twitter:description" content="用了半年多時間的阿里智能插座，實在是受不了它那做的超爛的「阿里智能」app 了，打開 app 后還要刷新幾下才能出現綁定的設備，界面也超難用。決心還是換回小米的產品綫。">
+<meta name="twitter:image" content="https://files.hakr.xyz/images/2018-07-21_01-0001.jpg">
   
     <link rel="alternate" href="/atom.xml" title="ZnHoCn&#39;s Blog" type="application/atom+xml">
   
@@ -68,12 +80,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-Annual-summary-2016" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Replace-Ali-socket-control-module-into-Xiaomi-control-module" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/posts/2016/12/30/Annual-summary-2016/" class="article-date">
-  <time datetime="2016-12-30T13:04:25.000Z" itemprop="datePublished">2016-12-30</time>
+    <a href="/posts/2018/07/21/Replace-Ali-socket-control-module-into-Xiaomi-control-module/" class="article-date">
+  <time datetime="2018-07-21T03:11:11.000Z" itemprop="datePublished">2018-07-21</time>
 </a>
     
   </div>
@@ -83,8 +93,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/posts/2016/12/30/Annual-summary-2016/">Annual summary 2016</a>
+    <h1 class="article-title" itemprop="name">
+      替换阿里智能插座控制模组為小米控制模组
     </h1>
   
 
@@ -92,73 +102,45 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        The article has been encrypted, please enter your password to view.<br>
-        
-          <p class="article-more-link">
-            <a href="/posts/2016/12/30/Annual-summary-2016/#more">Read More</a>
-          </p>
-        
+        <p>用了半年多時間的阿里智能插座，實在是受不了它那做的超爛的「阿里智能」app 了，打開 app 后還要刷新幾下才能出現綁定的設備，<br>界面也超難用。決心還是換回小米的產品綫。<br><a id="more"></a></p>
+<h2 id="模塊引脚"><a href="#模塊引脚" class="headerlink" title="模塊引脚"></a>模塊引脚</h2><p>小米控制模塊是早前研究「小米智能插座基础版」時拆出來的，吃灰很久了，使用是 88MW300 控制芯片；<br>阿里的控制模塊是阿里墙壁插座 10A 版本的，使用的是 ESP8266 芯片的 ESP-WROOM-02 WiFi 模塊。</p>
+<p><img src="//files.hakr.xyz/images/2018-07-21_01-0001.jpg" alt=""></p>
+<h2 id="轉換電路"><a href="#轉換電路" class="headerlink" title="轉換電路"></a>轉換電路</h2><p>從兩個智能插座裏拆出來的原始模塊是無法直接替換使用的，需要自己重新連接小米控制模塊的引脚，變成阿里控制模塊的 3 PIN 引脚。<br>外圍電路其實聼簡單的就只要加上 1 個藍色 LED / 1 個黃色 LED / 2 個 1k 電阻 / 1 個輕觸開關。</p>
+<p><img src="//files.hakr.xyz/images/2018-07-21_01-0002.png" alt=""></p>
+<h2 id="模塊焊接"><a href="#模塊焊接" class="headerlink" title="模塊焊接"></a>模塊焊接</h2><p>爲了節省成本，我沒定制 PCB，而是直接使用了洞洞板作爲轉接底板。</p>
+<p><img src="//files.hakr.xyz/images/2018-07-21_01-0003.jpg" alt=""><br><img src="//files.hakr.xyz/images/2018-07-21_01-0004.jpg" alt=""><br><img src="//files.hakr.xyz/images/2018-07-21_01-0005.jpg" alt=""><br><img src="//files.hakr.xyz/images/2018-07-21_01-0006.jpg" alt=""></p>
+<h2 id="問題"><a href="#問題" class="headerlink" title="問題"></a>問題</h2><p>什麽情況下才會需要這麽做？</p>
+<ol>
+<li>不想使用「阿里智能」的爛 app ，手上這好有個拆下來的「小米智能插座基础版」控制模塊。</li>
+<li>不想使用「阿里智能」的爛 app ，又不想購買需要 Zigbee 網關的 Aqara智能墙壁插座；可以直連 WiFi 路由器。</li>
+<li>需要 16A 的墻壁智能插座；目前只有阿里的智能插座有 16A 的版本其它廠商多爲 10A 版本。</li>
+</ol>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://znhocn.github.io/posts/2016/12/30/Annual-summary-2016/" data-id="cjkc9rve7000r1cutsj2vyunj" class="article-share-link">Share</a>
+      <a data-url="https://znhocn.github.io/posts/2018/07/21/Replace-Ali-socket-control-module-into-Xiaomi-control-module/" data-id="cjkc9rvgf002j1cut899drt8t" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Annual-summary/">Annual summary</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ali/">Ali</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mijia/">Mijia</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Smart-Plug/">Smart Plug</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Smart-Socket/">Smart Socket</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Xiaomi/">Xiaomi</a></li></ul>
 
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/posts/2016/12/01/hello-world/" class="article-date">
-  <time datetime="2016-11-30T17:01:01.000Z" itemprop="datePublished">2016-12-01</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/posts/2016/12/01/hello-world/">Hello World</a>
-    </h1>
+    <a href="/posts/2018/05/05/How-to-Make-Redscale-Film/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">如何製作紅色膠片 (Redscale Film)</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.<br>
-        
-          <p class="article-more-link">
-            <a href="/posts/2016/12/01/hello-world/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://znhocn.github.io/posts/2016/12/01/hello-world/" data-id="cjkc9rvh5003f1cutrlek5o2c" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
 
-
-  
-
-
-  <nav id="page-nav">
-    <a class="extend prev" rel="prev" href="/">&laquo; __('prev')</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-  </nav>
 </section>
         
           <aside id="sidebar">

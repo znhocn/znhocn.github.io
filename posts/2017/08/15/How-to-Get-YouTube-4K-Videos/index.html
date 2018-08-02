@@ -6,11 +6,13 @@
   <title>如何获取 YouTube 4K 视频 | ZnHoCn&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="通常能下载到清晰度最高的 YouTube 视频都是 720p 的，720p 以上的都是视频与音频是单独分开的，需要自己在本地手动合并成一个文件。">
+<meta name="keywords" content="YouTube,4K">
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何获取 YouTube 4K 视频">
 <meta property="og:url" content="https://znhocn.github.io/posts/2017/08/15/How-to-Get-YouTube-4K-Videos/index.html">
-<meta property="og:site_name" content="ZnHoCn's Blog">
+<meta property="og:site_name" content="ZnHoCn&#39;s Blog">
 <meta property="og:description" content="通常能下载到清晰度最高的 YouTube 视频都是 720p 的，720p 以上的都是视频与音频是单独分开的，需要自己在本地手动合并成一个文件。">
+<meta property="og:locale" content="zh-TW">
 <meta property="og:updated_time" content="2018-02-21T08:44:22.276Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何获取 YouTube 4K 视频">
@@ -65,7 +67,7 @@
         <a id="nav-search-btn" class="nav-icon" title="搜尋"></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://znhocn.github.io"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://znhocn.github.io"></form>
       </div>
     </div>
   </div>
@@ -93,18 +95,18 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>通常能下载到清晰度最高的 YouTube 视频都是 720p 的，720p 以上的都是视频与音频是单独分开的，需要自己在本地手动合并成一个文件。<br><a id="more"></a><br>对于获取 YouTube 视频的下载链接可以使用第三方提供的服务来获取下载连接。比如: <a href="http://megavn.com/" target="_blank" rel="external">Download Youtube Online</a><br>通过第三方工具从 YouTube 下载的视频一般分为 2 种格式，<code>MP4</code> 与 <code>WebM</code> ，4K (2160p) 的视频使用是 <code>WebM</code> 格式的，音频有 <code>m4a</code>, <code>mp3</code>, <code>aac</code>, <code>wav</code> 几种格式。<br>当把 4K 的视频文件和音频文件下载到本地后需要使用 <a href="https://www.ffmpeg.org/" target="_blank" rel="external">FFmpeg</a> 对其转码与合并成一个新的 <code>MP4</code> 文件。</p>
-<h3 id="转码-WebM-to-MP4"><a href="#转码-WebM-to-MP4" class="headerlink" title="转码 WebM to MP4"></a>转码 WebM to MP4</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ffmpeg -i input.webm -c:v libx264 output.mp4</div></pre></td></tr></table></figure>
+        <p>通常能下载到清晰度最高的 YouTube 视频都是 720p 的，720p 以上的都是视频与音频是单独分开的，需要自己在本地手动合并成一个文件。<br><a id="more"></a><br>对于获取 YouTube 视频的下载链接可以使用第三方提供的服务来获取下载连接。比如: <a href="http://megavn.com/" target="_blank" rel="noopener">Download Youtube Online</a><br>通过第三方工具从 YouTube 下载的视频一般分为 2 种格式，<code>MP4</code> 与 <code>WebM</code> ，4K (2160p) 的视频使用是 <code>WebM</code> 格式的，音频有 <code>m4a</code>, <code>mp3</code>, <code>aac</code>, <code>wav</code> 几种格式。<br>当把 4K 的视频文件和音频文件下载到本地后需要使用 <a href="https://www.ffmpeg.org/" target="_blank" rel="noopener">FFmpeg</a> 对其转码与合并成一个新的 <code>MP4</code> 文件。</p>
+<h3 id="转码-WebM-to-MP4"><a href="#转码-WebM-to-MP4" class="headerlink" title="转码 WebM to MP4"></a>转码 WebM to MP4</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i input.webm -c:v libx264 output.mp4</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>WebM 格式的转码非常耗时。</p>
 </blockquote>
-<h3 id="合并-MP4-WAV-to-MP4"><a href="#合并-MP4-WAV-to-MP4" class="headerlink" title="合并 MP4 + WAV to MP4"></a>合并 MP4 + WAV to MP4</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ffmpeg -i input.mp4 -i input.wav -vcodec copy -acodec aac output.mp4</div></pre></td></tr></table></figure>
-<h3 id="转码-合并"><a href="#转码-合并" class="headerlink" title="转码 + 合并"></a>转码 + 合并</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ffmpeg -i input.webm -i input.wav -c:a aac -c:v libx264 output.mp4</div></pre></td></tr></table></figure>
+<h3 id="合并-MP4-WAV-to-MP4"><a href="#合并-MP4-WAV-to-MP4" class="headerlink" title="合并 MP4 + WAV to MP4"></a>合并 MP4 + WAV to MP4</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i input.mp4 -i input.wav -vcodec copy -acodec aac output.mp4</span><br></pre></td></tr></table></figure>
+<h3 id="转码-合并"><a href="#转码-合并" class="headerlink" title="转码 + 合并"></a>转码 + 合并</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i input.webm -i input.wav -c:a aac -c:v libx264 output.mp4</span><br></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://znhocn.github.io/posts/2017/08/15/How-to-Get-YouTube-4K-Videos/" data-id="cjht9rk7c000xq8u8aimz2phx" class="article-share-link">Share</a>
+      <a data-url="https://znhocn.github.io/posts/2017/08/15/How-to-Get-YouTube-4K-Videos/" data-id="cjkc9rvg5002e1cutregd5k20" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/4K/">4K</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/YouTube/">YouTube</a></li></ul>
@@ -146,6 +148,10 @@
       <ul>
         
           <li>
+            <a href="/posts/2018/07/21/Replace-Ali-socket-control-module-into-Xiaomi-control-module/">替换阿里智能插座控制模组為小米控制模组</a>
+          </li>
+        
+          <li>
             <a href="/posts/2018/05/05/How-to-Make-Redscale-Film/">如何製作紅色膠片 (Redscale Film)</a>
           </li>
         
@@ -161,10 +167,6 @@
             <a href="/posts/2017/12/26/Hacking-IP-Camera-Hehuiyan-C08/">Hacking IP Camera (和慧眼-C08)</a>
           </li>
         
-          <li>
-            <a href="/posts/2017/12/17/Hacking-Philips-Smart-Led-Ball-Lamp/">Hacking 飞利浦智能球泡灯</a>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -174,7 +176,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">標籤雲</h3>
     <div class="widget tagcloud">
-      <a href="/tags/4K/" style="font-size: 10px;">4K</a> <a href="/tags/Annual-summary/" style="font-size: 15px;">Annual summary</a> <a href="/tags/ESP8266/" style="font-size: 15px;">ESP8266</a> <a href="/tags/Film/" style="font-size: 10px;">Film</a> <a href="/tags/Firmware/" style="font-size: 10px;">Firmware</a> <a href="/tags/Hacking/" style="font-size: 15px;">Hacking</a> <a href="/tags/Hardware/" style="font-size: 20px;">Hardware</a> <a href="/tags/IPCamera/" style="font-size: 10px;">IPCamera</a> <a href="/tags/Mijia/" style="font-size: 10px;">Mijia</a> <a href="/tags/PGP/" style="font-size: 10px;">PGP</a> <a href="/tags/Political/" style="font-size: 10px;">Political</a> <a href="/tags/Radio/" style="font-size: 10px;">Radio</a> <a href="/tags/Redscale/" style="font-size: 10px;">Redscale</a> <a href="/tags/Reverse-Engineering/" style="font-size: 10px;">Reverse Engineering</a> <a href="/tags/YARD-Stick-One/" style="font-size: 10px;">YARD Stick One</a> <a href="/tags/YouTube/" style="font-size: 10px;">YouTube</a> <a href="/tags/YubiKey/" style="font-size: 10px;">YubiKey</a>
+      <a href="/tags/4K/" style="font-size: 10px;">4K</a> <a href="/tags/Ali/" style="font-size: 10px;">Ali</a> <a href="/tags/Annual-summary/" style="font-size: 15px;">Annual summary</a> <a href="/tags/ESP8266/" style="font-size: 15px;">ESP8266</a> <a href="/tags/Film/" style="font-size: 10px;">Film</a> <a href="/tags/Firmware/" style="font-size: 10px;">Firmware</a> <a href="/tags/Hacking/" style="font-size: 15px;">Hacking</a> <a href="/tags/Hardware/" style="font-size: 20px;">Hardware</a> <a href="/tags/IPCamera/" style="font-size: 10px;">IPCamera</a> <a href="/tags/Mijia/" style="font-size: 15px;">Mijia</a> <a href="/tags/PGP/" style="font-size: 10px;">PGP</a> <a href="/tags/Political/" style="font-size: 10px;">Political</a> <a href="/tags/Radio/" style="font-size: 10px;">Radio</a> <a href="/tags/Redscale/" style="font-size: 10px;">Redscale</a> <a href="/tags/Reverse-Engineering/" style="font-size: 10px;">Reverse Engineering</a> <a href="/tags/Smart-Plug/" style="font-size: 10px;">Smart Plug</a> <a href="/tags/Smart-Socket/" style="font-size: 10px;">Smart Socket</a> <a href="/tags/Xiaomi/" style="font-size: 10px;">Xiaomi</a> <a href="/tags/YARD-Stick-One/" style="font-size: 10px;">YARD Stick One</a> <a href="/tags/YouTube/" style="font-size: 10px;">YouTube</a> <a href="/tags/YubiKey/" style="font-size: 10px;">YubiKey</a>
     </div>
   </div>
 
