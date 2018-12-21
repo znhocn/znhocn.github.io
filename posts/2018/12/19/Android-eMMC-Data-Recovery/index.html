@@ -13,12 +13,12 @@
 <meta property="og:site_name" content="ZnHoCn&#39;s Blog">
 <meta property="og:description" content="最近升级了硬件工作台的工具，可以完成 BGA 的拆焊的工作了。把家里几年前进水的一只安卓手机，拿出来恢复一下里面的数据。其实就是取下手机主板上的 eMMC 芯片再焊接到空的 U盘主控 PCB 板子上，读取里面的数据。这个方法只适合未全盘加密的设备使用，对于 iPhone 和全盘加密的 Android 只能修复主板或者拆下 ROM, CPU, Baseband 芯片，再焊接到完好的同型号主板上开机输">
 <meta property="og:locale" content="zh-TW">
-<meta property="og:image" content="https://files.iternull.com/images/2018-12-19_01-0001.png">
-<meta property="og:updated_time" content="2018-12-21T07:25:24.771Z">
+<meta property="og:image" content="https://files.hakr.xyz/images/2018-12-19_01-0001.png">
+<meta property="og:updated_time" content="2018-12-21T07:28:10.571Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android eMMC Data Recovery">
 <meta name="twitter:description" content="最近升级了硬件工作台的工具，可以完成 BGA 的拆焊的工作了。把家里几年前进水的一只安卓手机，拿出来恢复一下里面的数据。其实就是取下手机主板上的 eMMC 芯片再焊接到空的 U盘主控 PCB 板子上，读取里面的数据。这个方法只适合未全盘加密的设备使用，对于 iPhone 和全盘加密的 Android 只能修复主板或者拆下 ROM, CPU, Baseband 芯片，再焊接到完好的同型号主板上开机输">
-<meta name="twitter:image" content="https://files.iternull.com/images/2018-12-19_01-0001.png">
+<meta name="twitter:image" content="https://files.hakr.xyz/images/2018-12-19_01-0001.png">
   
     <link rel="alternate" href="/atom.xml" title="ZnHoCn&#39;s Blog" type="application/atom+xml">
   
@@ -97,7 +97,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>最近升级了硬件工作台的工具，可以完成 BGA 的拆焊的工作了。把家里几年前进水的一只安卓手机，拿出来恢复一下里面的数据。<br>其实就是取下手机主板上的 eMMC 芯片再焊接到空的 U盘主控 PCB 板子上，读取里面的数据。这个方法只适合未全盘加密的设备使用，对于 iPhone 和全盘加密的 Android 只能修复主板或者拆下 ROM, CPU, Baseband 芯片，再焊接到完好的同型号主板上开机输入密码才能查看数据了。<br><a id="more"></a><br><img src="//files.iternull.com/images/2018-12-19_01-0001.png" alt=""></p>
+        <p>最近升级了硬件工作台的工具，可以完成 BGA 的拆焊的工作了。把家里几年前进水的一只安卓手机，拿出来恢复一下里面的数据。<br>其实就是取下手机主板上的 eMMC 芯片再焊接到空的 U盘主控 PCB 板子上，读取里面的数据。这个方法只适合未全盘加密的设备使用，对于 iPhone 和全盘加密的 Android 只能修复主板或者拆下 ROM, CPU, Baseband 芯片，再焊接到完好的同型号主板上开机输入密码才能查看数据了。<br><a id="more"></a><br><img src="//files.hakr.xyz/images/2018-12-19_01-0001.png" alt=""></p>
 <h2 id="硬件拆焊"><a href="#硬件拆焊" class="headerlink" title="硬件拆焊"></a>硬件拆焊</h2><p>这里我使用的是安国的 U盘主控 PCB 板子，具体买的时候根据手机 eMMC 芯片型号查询对应的 BGA 封装的类型选择对应的 U盘主控板。当然也可以使用 eMMC 转 SD 卡座，或者使用 SD 卡套直接焊接飞线来连接。</p>
 <h2 id="读取-eMMC"><a href="#读取-eMMC" class="headerlink" title="读取 eMMC"></a>读取 eMMC</h2><p>我这里使用的是把 eMMC 焊接到 U盘主控板上来读取数据的方法。</p>
 <h4 id="备份数据"><a href="#备份数据" class="headerlink" title="备份数据"></a>备份数据</h4><p>首先对焊接完成的 USB 设备进行数据的镜像备份，恢复数据是操作镜像文件，避免直接操作设备而损坏数据。<br>备份前为了确保 BGA 焊接是好的，需要看一下系统能否识别设备的分区表，Windows 系统直接在「磁盘管理」里查看，Linux 使用命令 <code>fdisk -l</code> 查看。<br>设备镜像备份工具在 Windows 上可使用 <a href="https://sourceforge.net/projects/win32diskimager/" target="_blank" rel="noopener">Win32 Disk Imager</a> 或 git-bash 里的 <code>dd</code> 命令备份，Linux 上也是使用 <code>dd</code> 命令备份。</p>
@@ -120,7 +120,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://znhocn.github.io/posts/2018/12/19/Android-eMMC-Data-Recovery/" data-id="cjpxplg0m000srgtxnuihjp2h" class="article-share-link">Share</a>
+      <a data-url="https://znhocn.github.io/posts/2018/12/19/Android-eMMC-Data-Recovery/" data-id="cjpxpprze000sogtx78urdlbr" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Data-Recovery/">Data Recovery</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/eMMC/">eMMC</a></li></ul>
