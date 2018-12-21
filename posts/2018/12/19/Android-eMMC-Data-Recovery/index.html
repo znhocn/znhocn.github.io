@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Android eMMC Data Recovery | ZnHoCn&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="最近升级了硬件工作台的工具，可以完成 BGA 的拆焊的工作了。把家里几年前进水的一只安卓手机，拿出来恢复一下里面的数据。其实就是取下手机主板上的 eMMC 芯片再焊接到空的 U盘主控 PCB 板子上，读取里面的数据。这个方法只适合未全盘加密的设备使用，对于 iPhone 和全盘加密的 Android 只能修复主板或者拆下 ROM, CPU, Baseband 芯片，再焊接到完好的同型号主板上开机输">
+<meta name="keywords" content="Android,eMMC,Data Recovery">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android eMMC Data Recovery">
+<meta property="og:url" content="https://znhocn.github.io/posts/2018/12/19/Android-eMMC-Data-Recovery/index.html">
+<meta property="og:site_name" content="ZnHoCn&#39;s Blog">
+<meta property="og:description" content="最近升级了硬件工作台的工具，可以完成 BGA 的拆焊的工作了。把家里几年前进水的一只安卓手机，拿出来恢复一下里面的数据。其实就是取下手机主板上的 eMMC 芯片再焊接到空的 U盘主控 PCB 板子上，读取里面的数据。这个方法只适合未全盘加密的设备使用，对于 iPhone 和全盘加密的 Android 只能修复主板或者拆下 ROM, CPU, Baseband 芯片，再焊接到完好的同型号主板上开机输">
+<meta property="og:locale" content="zh-TW">
+<meta property="og:image" content="https://files.iternull.com/images/2018-12-19_01-0001.png">
+<meta property="og:updated_time" content="2018-12-21T07:25:24.771Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Android eMMC Data Recovery">
+<meta name="twitter:description" content="最近升级了硬件工作台的工具，可以完成 BGA 的拆焊的工作了。把家里几年前进水的一只安卓手机，拿出来恢复一下里面的数据。其实就是取下手机主板上的 eMMC 芯片再焊接到空的 U盘主控 PCB 板子上，读取里面的数据。这个方法只适合未全盘加密的设备使用，对于 iPhone 和全盘加密的 Android 只能修复主板或者拆下 ROM, CPU, Baseband 芯片，再焊接到完好的同型号主板上开机输">
+<meta name="twitter:image" content="https://files.iternull.com/images/2018-12-19_01-0001.png">
+  
+    <link rel="alternate" href="/atom.xml" title="ZnHoCn&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  
+    <!--<link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">-->
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">ZnHoCn&#39;s Blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="//www.hakr.xyz">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/about">About</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-twitter-link" class="nav-icon" href="https://twitter.com/znhocn" target="_blank" title="Twitter"></a>
+        
+        
+          <a id="nav-github-link" class="nav-icon" href="https://github.com/znhocn" target="_blank" title="GitHub"></a>
+        
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜尋"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://znhocn.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Android-eMMC-Data-Recovery" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/posts/2018/12/19/Android-eMMC-Data-Recovery/" class="article-date">
+  <time datetime="2018-12-19T10:32:41.000Z" itemprop="datePublished">2018-12-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Android eMMC Data Recovery
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>最近升级了硬件工作台的工具，可以完成 BGA 的拆焊的工作了。把家里几年前进水的一只安卓手机，拿出来恢复一下里面的数据。<br>其实就是取下手机主板上的 eMMC 芯片再焊接到空的 U盘主控 PCB 板子上，读取里面的数据。这个方法只适合未全盘加密的设备使用，对于 iPhone 和全盘加密的 Android 只能修复主板或者拆下 ROM, CPU, Baseband 芯片，再焊接到完好的同型号主板上开机输入密码才能查看数据了。<br><a id="more"></a><br><img src="//files.iternull.com/images/2018-12-19_01-0001.png" alt=""></p>
+<h2 id="硬件拆焊"><a href="#硬件拆焊" class="headerlink" title="硬件拆焊"></a>硬件拆焊</h2><p>这里我使用的是安国的 U盘主控 PCB 板子，具体买的时候根据手机 eMMC 芯片型号查询对应的 BGA 封装的类型选择对应的 U盘主控板。当然也可以使用 eMMC 转 SD 卡座，或者使用 SD 卡套直接焊接飞线来连接。</p>
+<h2 id="读取-eMMC"><a href="#读取-eMMC" class="headerlink" title="读取 eMMC"></a>读取 eMMC</h2><p>我这里使用的是把 eMMC 焊接到 U盘主控板上来读取数据的方法。</p>
+<h4 id="备份数据"><a href="#备份数据" class="headerlink" title="备份数据"></a>备份数据</h4><p>首先对焊接完成的 USB 设备进行数据的镜像备份，恢复数据是操作镜像文件，避免直接操作设备而损坏数据。<br>备份前为了确保 BGA 焊接是好的，需要看一下系统能否识别设备的分区表，Windows 系统直接在「磁盘管理」里查看，Linux 使用命令 <code>fdisk -l</code> 查看。<br>设备镜像备份工具在 Windows 上可使用 <a href="https://sourceforge.net/projects/win32diskimager/" target="_blank" rel="noopener">Win32 Disk Imager</a> 或 git-bash 里的 <code>dd</code> 命令备份，Linux 上也是使用 <code>dd</code> 命令备份。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dd <span class="keyword">if</span>=/dev/sda of=dump_0.img bs=1024</span><br></pre></td></tr></table></figure>
+<h4 id="查看镜像文件的分区表"><a href="#查看镜像文件的分区表" class="headerlink" title="查看镜像文件的分区表"></a>查看镜像文件的分区表</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">$ fdisk -l dump_0.img</span><br><span class="line">Ignoring extra data <span class="keyword">in</span> partition table 5.</span><br><span class="line">Ignoring extra data <span class="keyword">in</span> partition table 5.</span><br><span class="line">Disk dump_0.img: 3.6 GiB, 3875536896 bytes, 7569408 sectors</span><br><span class="line">Units: sectors of 1 * 512 = 512 bytes</span><br><span class="line">Sector size (logical/physical): 512 bytes / 512 bytes</span><br><span class="line">I/O size (minimum/optimal): 512 bytes / 512 bytes</span><br><span class="line">Disklabel <span class="built_in">type</span>: dos</span><br><span class="line">Disk identifier: 0xa91b46f7</span><br><span class="line"></span><br><span class="line">Device      Boot   Start        End    Sectors  Size Id Type</span><br><span class="line">dump_0.img1         1024 4294968318 4294967295    2T  5 Extended</span><br><span class="line">dump_0.img2        26624      47103      20480   10M 83 Linux</span><br><span class="line">dump_0.img3        47104      67583      20480   10M 83 Linux</span><br><span class="line">dump_0.img4       101376     113663      12288    6M 83 Linux</span><br><span class="line">dump_0.img5       144384    1981439    1837056  897M 83 Linux</span><br><span class="line">dump_0.img6      4336640 4294968318 4290631679    2T 83 Linux</span><br></pre></td></tr></table></figure>
+<h4 id="计算要挂载分区的位置"><a href="#计算要挂载分区的位置" class="headerlink" title="计算要挂载分区的位置"></a>计算要挂载分区的位置</h4><p>更具需要挂载分区的 Start 值乘以 Units 值得出挂载值</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">echo</span> $((4336640*512))</span><br><span class="line">2220359680</span><br></pre></td></tr></table></figure>
+<h4 id="创建挂载目录"><a href="#创建挂载目录" class="headerlink" title="创建挂载目录"></a>创建挂载目录</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir /mnt/emmc</span><br></pre></td></tr></table></figure>
+<h4 id="挂载指定分区"><a href="#挂载指定分区" class="headerlink" title="挂载指定分区"></a>挂载指定分区</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mount -o loop,offset=2220359680 dump_0.img /mnt/emmc/</span><br></pre></td></tr></table></figure>
+<h4 id="打包备份分区内的文件"><a href="#打包备份分区内的文件" class="headerlink" title="打包备份分区内的文件"></a>打包备份分区内的文件</h4><p>打包所有数据后可以复制到 Windows 上去解包查看具体的文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar cvzf ~/dump_0_img6.tar.gz /mnt/emmc/</span><br></pre></td></tr></table></figure>
+<h2 id="照片恢复"><a href="#照片恢复" class="headerlink" title="照片恢复"></a>照片恢复</h2><p>正常来说之前存储的照片如果没手动删除，那肯定是还在 DCIM 目录里的。但不幸的是我并没有在 DCIM 目录找到拍摄的照片，不过倒是存在一个 .thumbnails 文件夹。<br>.thumbnails 文件夹里有些缩略图和 .thumbdata5 的缓存文件。</p>
+<h4 id="从-thumbdata-恢复照片"><a href="#从-thumbdata-恢复照片" class="headerlink" title="从 .thumbdata 恢复照片"></a>从 <code>.thumbdata</code> 恢复照片</h4><p>这里使用 Python 脚本对 .thumbdata 文件的内照片进行读取并保存，另外你也可以使用 <a href="https://x0a.github.io/thumbdata3-viewer/" target="_blank" rel="noopener">HTML5 Thumbdata3 Viewer</a> 这个 Web 版的程序来读取。<a href="https://files.iternull.com/script/python/thumbdata.py" target="_blank" rel="noopener">thumbdata.py</a> 是我更改后的脚本，原始版本来自 <a href="https://android.stackexchange.com/questions/58087/read-content-of-thumbdata-file" target="_blank" rel="noopener">Stack Exchange</a> 。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> /mnt/emmc/</span><br><span class="line">$ find ./ -name *thumbdata*</span><br><span class="line">./DCIM/.thumbnails/.thumbdata5-1763508120_0</span><br><span class="line">$ mkdir ~/thumbnails</span><br><span class="line">$ cp DCIM/.thumbnails/.thumbdata5-1763508120_0 ~/thumbnails/</span><br><span class="line">$ <span class="built_in">cd</span> ~/thumbnails/</span><br><span class="line">$ wget https://files.iternull.com/script/python/thumbdata.py</span><br><span class="line">$ chmod 755 thumbdata.py</span><br><span class="line">$ ./thumbdata.py .thumbdata5-1763508120_0</span><br></pre></td></tr></table></figure>
+<h2 id="联系人恢复"><a href="#联系人恢复" class="headerlink" title="联系人恢复"></a>联系人恢复</h2><p>联系人保存在 <code>data/data/com.android.providers.contacts/databases/</code> 目录下的 <code>contacts2.db</code> 数据库文件中的 <code>contacts</code>, <code>view_contacts</code> 表里。<br>通话记录保存在 <code>data/data/com.android.providers.contacts/databases/</code> 目录下的 <code>calllog.db</code> 数据库文件中的 <code>calls</code> 表里。<br>使用 <a href="https://sqlitebrowser.org/" target="_blank" rel="noopener">DB Browser for SQLite</a> 打开数据库文件即可读取出原始数据。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> /mnt/emmc/</span><br><span class="line">$ find ./ -name contacts2.db</span><br><span class="line">./data/data/com.android.providers.contacts/databases/contacts2.db</span><br><span class="line">$ find ./ -name calllog.db</span><br><span class="line">./data/data/com.android.providers.contacts/databases/calllog.db</span><br></pre></td></tr></table></figure>
+<h2 id="短信恢复"><a href="#短信恢复" class="headerlink" title="短信恢复"></a>短信恢复</h2><p>短信保存在 <code>data/data/com.android.providers.telephony/databases/</code> 目录下的 <code>mmssms.db</code> 数据库文件中的 <code>sms</code> 表里。<br>使用 <a href="https://sqlitebrowser.org/" target="_blank" rel="noopener">DB Browser for SQLite</a> 打开数据库文件即可读取出原始数据。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> /mnt/emmc/</span><br><span class="line">$ find ./ -name mmssms.db</span><br><span class="line">./data/data/com.android.providers.telephony/databases/mmssms.db</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://znhocn.github.io/posts/2018/12/19/Android-eMMC-Data-Recovery/" data-id="cjpxplg0m000srgtxnuihjp2h" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Data-Recovery/">Data Recovery</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/eMMC/">eMMC</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/posts/2018/07/21/Replace-Ali-socket-control-module-into-Xiaomi-control-module/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">替换阿里智能插座控制模组為小米控制模组</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/posts/2018/12/19/Android-eMMC-Data-Recovery/">Android eMMC Data Recovery</a>
+          </li>
+        
+          <li>
+            <a href="/posts/2018/07/21/Replace-Ali-socket-control-module-into-Xiaomi-control-module/">替换阿里智能插座控制模组為小米控制模组</a>
+          </li>
+        
+          <li>
+            <a href="/posts/2018/05/05/How-to-Make-Redscale-Film/">如何製作紅色膠片 (Redscale Film)</a>
+          </li>
+        
+          <li>
+            <a href="/posts/2018/01/23/My-country-is-not-government/">我的國家不是政府</a>
+          </li>
+        
+          <li>
+            <a href="/posts/2017/12/30/Annual-summary-2017/">Annual summary 2017</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">標籤雲</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/4K/" style="font-size: 10px;">4K</a> <a href="/tags/Ali/" style="font-size: 10px;">Ali</a> <a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/Annual-summary/" style="font-size: 15px;">Annual summary</a> <a href="/tags/Data-Recovery/" style="font-size: 10px;">Data Recovery</a> <a href="/tags/ESP8266/" style="font-size: 15px;">ESP8266</a> <a href="/tags/Film/" style="font-size: 10px;">Film</a> <a href="/tags/Firmware/" style="font-size: 10px;">Firmware</a> <a href="/tags/Hacking/" style="font-size: 15px;">Hacking</a> <a href="/tags/Hardware/" style="font-size: 20px;">Hardware</a> <a href="/tags/IPCamera/" style="font-size: 10px;">IPCamera</a> <a href="/tags/Mijia/" style="font-size: 15px;">Mijia</a> <a href="/tags/PGP/" style="font-size: 10px;">PGP</a> <a href="/tags/Political/" style="font-size: 10px;">Political</a> <a href="/tags/Radio/" style="font-size: 10px;">Radio</a> <a href="/tags/Redscale/" style="font-size: 10px;">Redscale</a> <a href="/tags/Reverse-Engineering/" style="font-size: 10px;">Reverse Engineering</a> <a href="/tags/Smart-Plug/" style="font-size: 10px;">Smart Plug</a> <a href="/tags/Smart-Socket/" style="font-size: 10px;">Smart Socket</a> <a href="/tags/Xiaomi/" style="font-size: 10px;">Xiaomi</a> <a href="/tags/YARD-Stick-One/" style="font-size: 10px;">YARD Stick One</a> <a href="/tags/YouTube/" style="font-size: 10px;">YouTube</a> <a href="/tags/YubiKey/" style="font-size: 10px;">YubiKey</a> <a href="/tags/eMMC/" style="font-size: 10px;">eMMC</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">友情連結</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="https://blog.iternull.com" target="_blank">IterNull Blog</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 ZnHoCn<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="//www.hakr.xyz" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav>
+    
+
+<script src="/js/jquery-2.0.3.min.js" type='text/javascript'></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
