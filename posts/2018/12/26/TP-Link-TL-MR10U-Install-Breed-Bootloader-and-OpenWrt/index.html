@@ -5,21 +5,21 @@
   
   <title>TP-Link TL-MR10U Install Breed Bootloader + OpenWrt | ZnHoCn&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="淘了一个二手的 TL-MR10U 自己升级一下硬件，装个 OpenWrt 再配上 LAN-Tap 作为可随身携带的便捷抓包工具使用。还是自带电源，不然拖个充电宝太麻烦了，OpenWrt 官网上也有一个 Table of Hardware: Battery powered 页面列出了所有官方支持的可刷 OpenWrt 的“充电宝”。">
+  <meta name="description" content="淘了一个二手的 TL-MR10U 自己升级一下硬件，装个 OpenWrt 再配上 LAN-Tap 作为可随身携带的便捷抓包工具使用。还是自带电源的，不然拖个充电宝太麻烦了，OpenWrt 官网上也有一个 Table of Hardware: Battery powered 页面列出了所有官方支持的可刷 OpenWrt 的“充电宝”。">
 <meta name="keywords" content="OpenWrt,Breed Bootloader,TL-MR10U">
 <meta property="og:type" content="article">
 <meta property="og:title" content="TP-Link TL-MR10U Install Breed Bootloader + OpenWrt">
 <meta property="og:url" content="https://znhocn.github.io/posts/2018/12/26/TP-Link-TL-MR10U-Install-Breed-Bootloader-and-OpenWrt/index.html">
 <meta property="og:site_name" content="ZnHoCn&#39;s Blog">
-<meta property="og:description" content="淘了一个二手的 TL-MR10U 自己升级一下硬件，装个 OpenWrt 再配上 LAN-Tap 作为可随身携带的便捷抓包工具使用。还是自带电源，不然拖个充电宝太麻烦了，OpenWrt 官网上也有一个 Table of Hardware: Battery powered 页面列出了所有官方支持的可刷 OpenWrt 的“充电宝”。">
+<meta property="og:description" content="淘了一个二手的 TL-MR10U 自己升级一下硬件，装个 OpenWrt 再配上 LAN-Tap 作为可随身携带的便捷抓包工具使用。还是自带电源的，不然拖个充电宝太麻烦了，OpenWrt 官网上也有一个 Table of Hardware: Battery powered 页面列出了所有官方支持的可刷 OpenWrt 的“充电宝”。">
 <meta property="og:locale" content="zh-TW">
 <meta property="og:image" content="https://files.hakr.xyz/images//2018-12-26_01-0001.jpg">
 <meta property="og:image" content="https://files.hakr.xyz/images/2018-12-26_01-0002.png">
 <meta property="og:image" content="https://files.hakr.xyz/images//2018-12-26_01-0003.png">
-<meta property="og:updated_time" content="2018-12-26T18:40:38.970Z">
+<meta property="og:updated_time" content="2018-12-26T18:43:35.742Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="TP-Link TL-MR10U Install Breed Bootloader + OpenWrt">
-<meta name="twitter:description" content="淘了一个二手的 TL-MR10U 自己升级一下硬件，装个 OpenWrt 再配上 LAN-Tap 作为可随身携带的便捷抓包工具使用。还是自带电源，不然拖个充电宝太麻烦了，OpenWrt 官网上也有一个 Table of Hardware: Battery powered 页面列出了所有官方支持的可刷 OpenWrt 的“充电宝”。">
+<meta name="twitter:description" content="淘了一个二手的 TL-MR10U 自己升级一下硬件，装个 OpenWrt 再配上 LAN-Tap 作为可随身携带的便捷抓包工具使用。还是自带电源的，不然拖个充电宝太麻烦了，OpenWrt 官网上也有一个 Table of Hardware: Battery powered 页面列出了所有官方支持的可刷 OpenWrt 的“充电宝”。">
 <meta name="twitter:image" content="https://files.hakr.xyz/images//2018-12-26_01-0001.jpg">
   
     <link rel="alternate" href="/atom.xml" title="ZnHoCn&#39;s Blog" type="application/atom+xml">
@@ -99,7 +99,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>淘了一个二手的 TL-MR10U 自己升级一下硬件，装个 OpenWrt 再配上 LAN-Tap 作为可随身携带的便捷抓包工具使用。<br>还是自带电源，不然拖个充电宝太麻烦了，OpenWrt 官网上也有一个 <a href="https://openwrt.org/toh/views/toh_battery-powered" target="_blank" rel="noopener">Table of Hardware: Battery powered</a> 页面列出了所有官方支持的可刷 OpenWrt 的“充电宝”。<br><a id="more"></a><br><img src="//files.hakr.xyz/images//2018-12-26_01-0001.jpg" alt=""></p>
+        <p>淘了一个二手的 TL-MR10U 自己升级一下硬件，装个 OpenWrt 再配上 LAN-Tap 作为可随身携带的便捷抓包工具使用。<br>还是自带电源的，不然拖个充电宝太麻烦了，OpenWrt 官网上也有一个 <a href="https://openwrt.org/toh/views/toh_battery-powered" target="_blank" rel="noopener">Table of Hardware: Battery powered</a> 页面列出了所有官方支持的可刷 OpenWrt 的“充电宝”。<br><a id="more"></a><br><img src="//files.hakr.xyz/images//2018-12-26_01-0001.jpg" alt=""></p>
 <h2 id="升级硬件"><a href="#升级硬件" class="headerlink" title="升级硬件"></a>升级硬件</h2><p>你需要购买 64MB RAM 芯片 (HY5DU121622DTP-D43) 16MB FLASH 芯片 (W25Q128)；准备热风枪拆焊台、电烙铁、助焊剂、镊子等工具；以及一个 CH341A 编程器外加宽体 SOP8 烧录座。<br>具体怎么操作可以网上找视频看看。记得别用电烙铁抵着吸锡带去拖内存焊盘上剩余的高温锡，你绝对把焊盘给弄脱落的。其实只给旁边的原件区域贴上高温胶带，在焊盘上加点助焊剂再用热风枪把新元件吹焊上去即可。<br>拆前最好先拍照，好记得原件的第一 Pin 是哪个位置，以免之后焊错方向。</p>
 <h2 id="备份原始固件"><a href="#备份原始固件" class="headerlink" title="备份原始固件"></a>备份原始固件</h2><p>把拆下的 FLASH 用编程器读出所有数据并保存到备份文件里，再把读取的数据写入到新的 64MB FLASH 芯片里，最后再把新 FLASH 焊回主板上。</p>
 <h2 id="刷入-Breed-Bootloader"><a href="#刷入-Breed-Bootloader" class="headerlink" title="刷入 Breed Bootloader"></a>刷入 Breed Bootloader</h2><p>下载未锁分区的 <a href="https://archive.openwrt.org/snapshots/trunk/ar71xx/generic/openwrt-ar71xx-generic-tl-mr10u-v1-squashfs-factory.bin" target="_blank" rel="noopener">openwrt-ar71xx-generic-tl-mr10u-v1-squashfs-factory.bin</a>  固件，用于刷入 u-boot。<br>下载完成后直接在 TP-Link 官方的 Web 控制台里上传固件进行升级，TL-MR10U 插上网线与电脑相联，等待数分钟让路由器完成重启。</p>
@@ -133,7 +133,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://znhocn.github.io/posts/2018/12/26/TP-Link-TL-MR10U-Install-Breed-Bootloader-and-OpenWrt/" data-id="cjq5izh6n0015tstxoove3i85" class="article-share-link">Share</a>
+      <a data-url="https://znhocn.github.io/posts/2018/12/26/TP-Link-TL-MR10U-Install-Breed-Bootloader-and-OpenWrt/" data-id="cjq5j2i3o001250tx5yap627u" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Breed-Bootloader/">Breed Bootloader</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/OpenWrt/">OpenWrt</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/TL-MR10U/">TL-MR10U</a></li></ul>
