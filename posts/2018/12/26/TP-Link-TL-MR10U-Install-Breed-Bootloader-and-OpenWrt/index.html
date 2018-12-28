@@ -16,7 +16,7 @@
 <meta property="og:image" content="https://files.hakr.xyz/images//2018-12-26_01-0001.jpg">
 <meta property="og:image" content="https://files.hakr.xyz/images/2018-12-26_01-0002.png">
 <meta property="og:image" content="https://files.hakr.xyz/images//2018-12-26_01-0003.png">
-<meta property="og:updated_time" content="2018-12-26T18:43:35.742Z">
+<meta property="og:updated_time" content="2018-12-28T15:34:30.128Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="TP-Link TL-MR10U Install Breed Bootloader + OpenWrt">
 <meta name="twitter:description" content="淘了一个二手的 TL-MR10U 自己升级一下硬件，装个 OpenWrt 再配上 LAN-Tap 作为可随身携带的便捷抓包工具使用。还是自带电源的，不然拖个充电宝太麻烦了，OpenWrt 官网上也有一个 Table of Hardware: Battery powered 页面列出了所有官方支持的可刷 OpenWrt 的“充电宝”。">
@@ -102,19 +102,25 @@
         <p>淘了一个二手的 TL-MR10U 自己升级一下硬件，装个 OpenWrt 再配上 LAN-Tap 作为可随身携带的便捷抓包工具使用。<br>还是自带电源的，不然拖个充电宝太麻烦了，OpenWrt 官网上也有一个 <a href="https://openwrt.org/toh/views/toh_battery-powered" target="_blank" rel="noopener">Table of Hardware: Battery powered</a> 页面列出了所有官方支持的可刷 OpenWrt 的“充电宝”。<br><a id="more"></a><br><img src="//files.hakr.xyz/images//2018-12-26_01-0001.jpg" alt=""></p>
 <h2 id="升级硬件"><a href="#升级硬件" class="headerlink" title="升级硬件"></a>升级硬件</h2><p>你需要购买 64MB RAM 芯片 (HY5DU121622DTP-D43) 16MB FLASH 芯片 (W25Q128)；准备热风枪拆焊台、电烙铁、助焊剂、镊子等工具；以及一个 CH341A 编程器外加宽体 SOP8 烧录座。<br>具体怎么操作可以网上找视频看看。记得别用电烙铁抵着吸锡带去拖内存焊盘上剩余的高温锡，你绝对把焊盘给弄脱落的。其实只给旁边的原件区域贴上高温胶带，在焊盘上加点助焊剂再用热风枪把新元件吹焊上去即可。<br>拆前最好先拍照，好记得原件的第一 Pin 是哪个位置，以免之后焊错方向。</p>
 <h2 id="备份原始固件"><a href="#备份原始固件" class="headerlink" title="备份原始固件"></a>备份原始固件</h2><p>把拆下的 FLASH 用编程器读出所有数据并保存到备份文件里，再把读取的数据写入到新的 64MB FLASH 芯片里，最后再把新 FLASH 焊回主板上。</p>
-<h2 id="刷入-Breed-Bootloader"><a href="#刷入-Breed-Bootloader" class="headerlink" title="刷入 Breed Bootloader"></a>刷入 Breed Bootloader</h2><p>下载未锁分区的 <a href="https://archive.openwrt.org/snapshots/trunk/ar71xx/generic/openwrt-ar71xx-generic-tl-mr10u-v1-squashfs-factory.bin" target="_blank" rel="noopener">openwrt-ar71xx-generic-tl-mr10u-v1-squashfs-factory.bin</a>  固件，用于刷入 u-boot。<br>下载完成后直接在 TP-Link 官方的 Web 控制台里上传固件进行升级，TL-MR10U 插上网线与电脑相联，等待数分钟让路由器完成重启。</p>
+<h2 id="刷入-Breed-Bootloader"><a href="#刷入-Breed-Bootloader" class="headerlink" title="刷入 Breed Bootloader"></a>刷入 Breed Bootloader</h2><p>下载未锁分区的 <a href="https://pan.baidu.com/s/1OCUnvfjJHJar7Pk0Lgt_uQ" target="_blank" rel="noopener">openwr-ar71xx-generic-tl-mr10u-v1-squashfs-factory.bin</a> 固件，用于刷入 U-Boot。<br>下载完成后直接在 TP-Link 官方的 Web 控制台里上传固件进行升级，TL-MR10U 插上网线与电脑相联，等待数分钟让路由器完成重启。</p>
 <p>使用 git-bash 附带的 <code>scp</code> 工具上传 Breed Bootloader 到 TL-MR10U 的 <code>/tmp</code> 目录里。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp breed-ar9331-mr12u-r1163.bin root@192.168.1.1:/tmp/</span><br></pre></td></tr></table></figure>
-<p>通过 SSH 登录 TL-MR10U 刷入新的 <a href="https://breed.hackpascal.net/EOL/breed-ar9331-mr12u-r1163.bin" target="_blank" rel="noopener">Breed Bootloader</a></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh root@192.168.1.1</span><br><span class="line">mtd -r write breed-ar9331-mr12u-r1163.bin u-boot</span><br></pre></td></tr></table></figure>
-<p>如果出现 Could not open mtd device: u-boot Can’t open device for writing! 意味着你使用了 OpenWrt 官方正式版固件，默认是锁了 U-Boot 的，需要使用未锁分区才行。</p>
+<p>通过 SSH 登录 TL-MR10U </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh root@192.168.1.1</span><br></pre></td></tr></table></figure>
+<p>备份 U-Boot &amp; ART</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cat /proc/mtd</span><br><span class="line">dd <span class="keyword">if</span>=/dev/mtd0 of=/tmp/u-boot.bin</span><br><span class="line">dd <span class="keyword">if</span>=/dev/mtd4 of=/tmp/art.bin</span><br><span class="line">scp root@192.168.1.1:/tmp/*.bin .    <span class="comment"># 在你的电脑终端上执行，从远端复制到电脑上</span></span><br></pre></td></tr></table></figure>
+<p>刷入新的 <a href="https://breed.hackpascal.net/EOL/breed-ar9331-mr12u-r1163.bin" target="_blank" rel="noopener">Breed Bootloader</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mtd -r write breed-ar9331-mr12u-r1163.bin u-boot</span><br></pre></td></tr></table></figure>
+<p>如果出现 Could not open mtd device: u-boot Can’t open device for writing! 意味着你使用了 OpenWrt 官方正式版固件，默认是锁了 U-Boot 的，需要使用未锁分区才行。未锁分区的固件需要自己改 OpenWrt 源代码配置再重新编译或者下载他人编译好的。</p>
 <h2 id="还原-Atheros-ART"><a href="#还原-Atheros-ART" class="headerlink" title="还原 Atheros ART"></a>还原 Atheros ART</h2><ul>
 <li>注：如果你更换了 FLASH 芯片，不还原 Atheros ART 数据会导致你路由器无法使用 WiFi 功能！</li>
 </ul>
-<p>ART 数据里存储着 WiFi 功能的配置和驱动，如果损坏或丢失 ART 都会导致你安装后的 OpenWrt 没有无线功能。<br>按住 RESET 键后打开电源，持续按住 5 秒左右就可进入 Breed 的恢复模式。确保路由器使用网线连接到了电脑后，在浏览器里输入 <code>192.168.1.1</code> 进入 Breed Web 恢复控制台。<br>在【固件更新】选项里选择【编程器固件】取消勾选保留 ART 只勾选保留 Bootloader ，上传之前使用编程器备份的 FLASH dump 文件。</p>
+<p>ART 数据里存储着 WiFi 功能的配置和驱动，如果损坏或丢失 ART 都会导致你安装后的 OpenWrt 没有无线功能。<br>按住 RESET 键后打开电源，持续按住 5 秒左右就可进入 Breed 的恢复模式。确保路由器使用网线连接到了电脑后，在浏览器里输入 <code>192.168.1.1</code> 进入 Breed Web 恢复控制台。<br>在【固件更新】选项里选择【编程器固件】取消勾选保留 ART 只勾选保留 Bootloader ，上传之前使用编程器备份的 FLASH dump 文件。<br>也可直接使用之前备份的 ART 直接还原。</p>
 <p><img src="//files.hakr.xyz/images/2018-12-26_01-0002.png" alt=""></p>
 <h2 id="安装-OpenWrt"><a href="#安装-OpenWrt" class="headerlink" title="安装 OpenWrt"></a>安装 OpenWrt</h2><p>恢复完成并重启后，再次手动进入 Breed 恢复模式。在【固件更新】选项里选择【常规固件】只勾选固件并上传最新的 OpenWrt factory 固件，与此同时也可备份 ART 以便后续再次用到。固件可在 TL-MR10U 的 OpenWrt 官网页面下载。</p>
 <p><img src="//files.hakr.xyz/images//2018-12-26_01-0003.png" alt=""></p>
+<p>如果是使用命令行安装，命令如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">scp lede-17.01.6-ar71xx-generic-tl-mr10u-v1-squashfs-factory.bin root@192.168.1.1:/tmp/</span><br><span class="line">ssh root192.168.1.1</span><br><span class="line">mtd -r write lede-17.01.6-ar71xx-generic-tl-mr10u-v1-squashfs-factory.bin firmware</span><br></pre></td></tr></table></figure>
 <p>OpenWrt TP-Link TL-MR10U: <a href="https://openwrt.org/toh/tp-link/tl-mr10u" target="_blank" rel="noopener">https://openwrt.org/toh/tp-link/tl-mr10u</a><br>Firmware OpenWrt Install: <a href="http://downloads.openwrt.org/releases/17.01.6/targets/ar71xx/generic/lede-17.01.6-ar71xx-generic-tl-mr10u-v1-squashfs-factory.bin" target="_blank" rel="noopener">lede-17.01.6-ar71xx-generic-tl-mr10u-v1-squashfs-factory.bin</a><br>Firmware OpenWrt Upgrade: <a href="http://downloads.openwrt.org/releases/17.01.6/targets/ar71xx/generic/lede-17.01.6-ar71xx-generic-tl-mr10u-v1-squashfs-sysupgrade.bin" target="_blank" rel="noopener">lede-17.01.6-ar71xx-generic-tl-mr10u-v1-squashfs-sysupgrade.bin</a></p>
 <h2 id="配置-OpenWrt"><a href="#配置-OpenWrt" class="headerlink" title="配置 OpenWrt"></a>配置 OpenWrt</h2><p>安装完成后首先在 Web 控制台里配置密码；配置子网网段以防发生冲突；配置无线功能；配置互联网访问功能，可选择使用网线连接互联网或使用无线连接到另一个可访问互联网的 WiFi AP。<br>如果你想在非本路由所在网段访问该路由器的 SSH 和 Web 控制台的话记得在密码设置页面勾选上允许从远端主机访问已经在防火墙里添加开放允许 <code>22</code> 和 <code>80</code> 端口访问。</p>
 <p>更新软件包</p>
@@ -126,14 +132,15 @@
 <h2 id="遇到的坑"><a href="#遇到的坑" class="headerlink" title="遇到的坑"></a>遇到的坑</h2><p>因为 ART 的问题我把官网所有能下载的 TL-MR10U 固件都刷了一遍；网上搜索到我 WiFi 不能用的解决办法都是修改 <code>/etc</code> 目录里的配置文件，然而我连无线网卡都识别不到。。。<br>TP-Link TL-MR10U 目前早已停产，能买到的都是二手的，另外这个系列还有 TL-MR11U, TL-MR12U, TL-MR13U 可以选择。</p>
 <h2 id="Link"><a href="#Link" class="headerlink" title="Link"></a>Link</h2><ul>
 <li><a href="https://oldwiki.archive.openwrt.org/doc/howto/generic.flashing" target="_blank" rel="noopener">Installing OpenWrt [Old OpenWrt Wiki]</a></li>
-<li><a href="https://oldwiki.archive.openwrt.org/doc/howto/restore_art_partition" target="_blank" rel="noopener">How to restore ART partition [Old OpenWrt Wiki]</a></li>
+<li><a href="https://openwrt.org/docs/guide-user/installation/restore_art_partition" target="_blank" rel="noopener">OpenWrt Project: How to restore ART partition</a></li>
+<li><a href="https://openwrt.org/docs/guide-developer/quickstart-build-images" target="_blank" rel="noopener">OpenWrt Project: Quick Image Building Guide</a></li>
 <li><a href="https://www.cnblogs.com/11hwu2/articles/3702313.html" target="_blank" rel="noopener">Openwrt中的Art区域</a></li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://znhocn.github.io/posts/2018/12/26/TP-Link-TL-MR10U-Install-Breed-Bootloader-and-OpenWrt/" data-id="cjq5j2i3o001250tx5yap627u" class="article-share-link">Share</a>
+      <a data-url="https://znhocn.github.io/posts/2018/12/26/TP-Link-TL-MR10U-Install-Breed-Bootloader-and-OpenWrt/" data-id="cjq86plut00124ctxzshcehjq" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Breed-Bootloader/">Breed Bootloader</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/OpenWrt/">OpenWrt</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/TL-MR10U/">TL-MR10U</a></li></ul>
