@@ -3,16 +3,10 @@
 My Blog: https://znhocn.github.io/
 
 ```bash
-git clone https://github.com/znhocn/znhocn.github.io.git
+git clone git@github.com:znhocn/znhocn.github.io.git
 cd znhocn.github.io/
-./cryption.sh de
+npx npm-check-updates -u
 npm install hexo-cli -g && npm install
-```
-
-```bash
-git pull
-./cryption.sh en
-git add .
 git commit -am "Updated: $(date +%F\ %H:%M:%S)"
-git push
+git push -u origin main
 ```
